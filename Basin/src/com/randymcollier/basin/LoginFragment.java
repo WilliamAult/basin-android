@@ -209,7 +209,9 @@ public class LoginFragment extends Fragment {
         String firstName = user.getFirstName();
         String lastName = user.getLastName();
         String birthday = user.getBirthday();
-        String currentLocation = user.getLocation().getProperty("name").toString();
+        String currentLocation = "";
+        if (user.getLocation() != null)
+        	currentLocation = user.getLocation().getProperty("name").toString();
         String email = user.getProperty("email").toString();
         String gender = user.getProperty("gender").toString();
         String hometown = "";
